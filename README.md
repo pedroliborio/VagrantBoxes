@@ -1,5 +1,5 @@
 # VagrantBoxes
-Vagrant files to provision the phd-vm, Debian 9.12 (stretch), with all pre-requisites. The idea is to have a ready OOTB VM just runninng the 'vagrant up' command.
+Vagrant files to provision the phd-vm, Debian 9.12 (stretch), with all pre-requisites to run a ns3 project. The idea is to have a ready OOTB VM just runninng the 'vagrant up' command.
 
 Requirements:
 <ol>
