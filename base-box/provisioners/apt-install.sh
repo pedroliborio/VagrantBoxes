@@ -20,8 +20,7 @@ sudo apt-get -y install python3-pip
 sudo apt-get -y install python3 -m pip install matplotlib
 sudo apt-get -y install python3 -m pip install numpy
 sudo apt-get -y install python3 -m pip install scipy
-apt-get update
 sudo apt-get -y install build-essential module-assistant dkms
 sudo apt-get -y install linux-image-amd64 linux-headers-amd64
-sudo apt-get install vim-gui-common
-sudo apt-get install vim-runtime
+sudo apt-get -y install vim-gui-common
+sudo apt-get -y install vim-runtime
