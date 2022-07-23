@@ -24,3 +24,4 @@ sudo apt-get -y install build-essential module-assistant dkms
 sudo apt-get -y install linux-image-amd64 linux-headers-amd64
 sudo apt-get -y install vim-gui-common
 sudo apt-get -y install vim-runtime
+sudo apt-get -y install npm
