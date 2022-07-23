@@ -29,6 +29,7 @@ Vagrant.configure("2") do |config|
 
     # Configure the ssh port on your machine as well
     node.vm.network "forwarded_port", guest: 22, host: 10032, id: "ssh"
+    node.vm.network "forwarded_port", guest: 8080, host: 8080, id: "http"
 
     ## Runtime Node
     node.vm.provider "virtualbox" do |vb|
