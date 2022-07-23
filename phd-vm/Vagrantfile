@@ -1,0 +1,42 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+    
+  # Configure the path below properly
+  # change permissions accordingly as well
+  config.vm.synced_folder ".", "/vagrant", type: "virtualbox", mount_options: ["dmode=755,fmode=764"]
+
+  #Uncomment this if you want to use your own ssh key, default is true and vagrant will create a ssh key for us
+  #https://www.vagrantup.com/docs/vagrantfile/ssh_settings
+  #config.ssh.insert_key = false
+  #config.ssh.private_key_path = <path to your private key>
+
+  #Command to run guest addtions installation by terminal in case of fail (you need to load the iso on virtual box manager: settings, storage, sata controller)
+  #https://askubuntu.com/questions/22743/how-do-i-install-guest-additions-in-a-virtualbox-vm
+  # mount /dev/cdrom /mnt              # or any other mountpoint
+  # cd /mnt
+  # ./VBoxLinuxAdditions.run
+  # reboot
+
+
+  config.vm.define "phd-vm" do |node|
+    node.vm.box = "../vagrant-box/basebox.box"
+    node.vm.hostname = "phd-vm"
+    node.vm.network "public_network"
+    #This is needed only in case of fail
+    #node.vbguest.installer_options = { allow_kernel_upgrade: true }
+
+    # Configure the ssh port on your machine as well
+    node.vm.network "forwarded_port", guest: 22, host: 10032, id: "ssh"
+
+    ## Runtime Node
+    node.vm.provider "virtualbox" do |vb|
+      vb.gui = false
+      vb.memory = 4*1024
+      vb.cpus = 4
+      vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    end
+  end
+  
+end
