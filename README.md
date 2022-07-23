@@ -1,10 +1,11 @@
 # VagrantBoxes
 Vagrant files to provision the phd-vm, Debian 9.12 (stretch), with all pre-requisites. The idea is to have a ready OOTB VM just runninng the 'vagrant up' command.
 
-Requirements: 
-Install virtual box and virtual box extensions pack - https://www.virtualbox.org/wiki/Downloads
-
-Install Vagrant: https://www.vagrantup.com/
+Requirements:
+<ol>
+  <li>Install virtual box and virtual box extensions pack - https://www.virtualbox.org/wiki/Downloads<li>
+  <li>Install Vagrant: https://www.vagrantup.com/<li>
+</ol>
 
 In the basebox folder:
 <ol>
