@@ -3,6 +3,7 @@ Vagrant files to provision the phd-vm, Debian 9.12 (stretch), with all pre-requi
 
 Requirements: 
 Install virtual box and virtual box extensions pack - https://www.virtualbox.org/wiki/Downloads
+
 Install Vagrant: https://www.vagrantup.com/
 
 In the basebox folder:
