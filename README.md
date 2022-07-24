@@ -7,7 +7,7 @@ Requirements:
   <li> Install Vagrant: https://www.vagrantup.com/ </li>
 </ol>
 
-In the basebox folder:
+Installtion Steps:
 <ol>
   <li>Clone repo</li>
   <li>In the basebox folder create the basebox typing:<code>vagrant up</code></li>
